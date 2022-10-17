@@ -56,7 +56,7 @@ export const updateProduct = async(req,res)=>{
 
     try {
 
-        const updatedProduct = await Product.findOneAndUpdate(req.params.id, {$ser: req.body},{
+        const updatedProduct = await Product.findOneAndUpdate(req.params.id, {$set: req.body},{
             new: true
         })        
 
